@@ -49,8 +49,8 @@
       "png": {
         "dest": "png",
         "scale": {
-          "width": [300, 600],
-          "height": [128, 200]
+          "width": [600],
+          "height": [200]
         },
         "retina": true
       },
