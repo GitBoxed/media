@@ -41,7 +41,7 @@
       "source": "{{ global.files.source }}\/logo.template",
       "dest": "{{ global.files.dest }}",
       "data":[
-        "logo_3d", "logo_flat"
+        "logo-3d", "logo-flat"
       ],
       "svg": {
         "dest": "svg"
@@ -93,6 +93,7 @@
       }
     },
     "icon": {
+      "name": "",
       "children": [
         "default"
       ],
@@ -101,6 +102,7 @@
       }
     },
     "text": {
+      "name": "full",
       "children": [
         "default"
       ],
@@ -119,6 +121,7 @@
       }
     },
     "c0": {
+      "name":"regentgray",
       "children": [
         "icon-text"
       ],
@@ -126,6 +129,7 @@
       }
     },
     "c1": {
+      "name":"tundora",
       "children": [
         "icon-text"
       ],
@@ -136,6 +140,7 @@
       }
     },
     "c2": {
+      "name":"cornflowerblue",
       "children": [
         "icon-text"
       ],
@@ -146,6 +151,7 @@
       }
     },
     "c3": {
+      "name":"tangerine",
       "children": [
         "icon-text"
       ],
@@ -156,6 +162,7 @@
       }
     },
     "c4": {
+      "name":"pictonblue",
       "children": [
         "icon-text"
       ],
@@ -166,6 +173,7 @@
       }
     },
     "c5": {
+      "name":"turquoiseblue",
       "children": [
         "icon-text"
       ],
@@ -176,6 +184,7 @@
       }
     },
     "c6": {
+      "name":"heliotrope",
       "children": [
         "icon-text"
       ],
@@ -186,6 +195,7 @@
       }
     },
     "c7": {
+      "name":"lavendermagenta",
       "children": [
         "icon-text"
       ],
@@ -196,16 +206,18 @@
       }
     },
     "c8": {
+      "name":"black",
       "children": [
         "icon-text"
       ],
       "value": {
         "fill": "{{ global.color.black }}",
         "lite_fill": "{{#color}} ('{{global.color.black}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.black}}').lighten(22) {{/color}}"
+        "double_lite_fill": "{{#color}} ('{{global.color.black}}').lighten(50) {{/color}}"
       }
     },
     "c9": {
+      "name":"white",
       "children": [
         "icon-text"
       ],
@@ -247,8 +259,7 @@
         "tape": true
       }
     },
-    "circled-git": {
-      "name": "logo-cg",
+    "circled": {
       "children": [
         "colors"
       ],
@@ -256,8 +267,7 @@
         "circled_git" : true
       }
     },
-    "cubed-git": {
-      "name": "logo-cug",
+    "cubed": {
       "children": [
         "colors"
       ],
@@ -265,8 +275,7 @@
         "border_cubed_git" : true
       }
     },
-    "cube3d-git": {
-      "name": "logo-cube3d",
+    "3dcube": {
       "children": [
         "colors"
       ],
@@ -274,8 +283,7 @@
         "cube_3d_git" : true
       }
     },
-    "flatcube-git": {
-      "name": "logo-flatcube",
+    "2dcube": {
       "children": [
         "colors"
       ],
@@ -283,16 +291,16 @@
         "cubed_git" : true
       }
     },
-    "logo_3d": {
+    "logo-3d": {
       "children": [
-        "boxed", "tapped", "circled-git", "cubed-git", "cube3d-git", "flatcube-git"
+        "boxed", "tapped", "circled", "cubed", "3dcube", "2dcube"
       ],
       "value": {
       }
     },
-    "logo_flat": {
+    "logo-flat": {
       "children": [
-        "boxed", "tapped", "circled-git", "cubed-git", "cube3d-git", "flatcube-git"
+        "boxed", "tapped", "circled", "cubed", "3dcube", "2dcube"
       ],
       "value": {
         "cube_front": false,
