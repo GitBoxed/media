@@ -41,7 +41,7 @@
       "source": "{{ global.files.source }}\/logo.template",
       "dest": "{{ global.files.dest }}",
       "data":[
-        "logo-3d", "logo-flat"
+        "logo"
       ],
       "svg": {
         "dest": "svg"
@@ -115,6 +115,7 @@
         "text": false,
         "tape": false,
         "cube_front": true,
+        "zoom_out": false,
         "circled_git": false,
         "border_cubed_git":false,
         "cube_3d_git": false,
@@ -128,6 +129,7 @@
         "lite_fill": "{{#color}} ('{{global.color.regentgray}}').saturate(0.8945).lighten(15.4902) {{/color}}",
         "double_lite_fill": "{{#color}} ('{{global.color.regentgray}}').lighten(28) {{/color}}",
         "background_fill": "{{ global.color.white }}",
+        "document_background_fill": "{{#color}} ('{{global.color.regentgray}}').saturate(9.6154).lighten(31.3725) {{/color}}",
         "zoom": "{{ global.default.zoom }}",
         "transform": "{{ global.default.transform }}",
         "transform_inside": "{{ global.default.transform }}",
@@ -178,7 +180,8 @@
       "value": {
         "fill": "{{ global.color.tundora }}",
         "lite_fill": "{{#color}} ('{{global.color.tundora}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.tundora}}').lighten(40) {{/color}}"
+        "double_lite_fill": "{{#color}} ('{{global.color.tundora}}').lighten(40) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.tundora}}').saturate(9.6154).lighten(40) {{/color}}"
       }
     },
     "c2": {
@@ -189,7 +192,8 @@
       "value": {
         "fill": "{{ global.color.cornflowerblue }}",
         "lite_fill": "{{#color}} ('{{global.color.cornflowerblue}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.cornflowerblue}}').lighten(22) {{/color}}"
+        "double_lite_fill": "{{#color}} ('{{global.color.cornflowerblue}}').lighten(22) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.cornflowerblue}}').saturate(9.6154).lighten(22) {{/color}}"
       }
     },
     "c3": {
@@ -200,7 +204,8 @@
       "value": {
         "fill": "{{ global.color.tangerine }}",
         "lite_fill": "{{#color}} ('{{global.color.tangerine}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.tangerine}}').lighten(22) {{/color}}"
+        "double_lite_fill": "{{#color}} ('{{global.color.tangerine}}').lighten(22) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.tangerine}}').saturate(9.6154).lighten(22) {{/color}}"
       }
     },
     "c4": {
@@ -211,7 +216,8 @@
       "value": {
         "fill": "{{ global.color.pictonblue }}",
         "lite_fill": "{{#color}} ('{{global.color.pictonblue}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.pictonblue}}').lighten(30) {{/color}}"
+        "double_lite_fill": "{{#color}} ('{{global.color.pictonblue}}').lighten(30) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.pictonblue}}').saturate(9.6154).lighten(30) {{/color}}"
       }
     },
     "c5": {
@@ -222,7 +228,8 @@
       "value": {
         "fill": "{{ global.color.turquoiseblue }}",
         "lite_fill": "{{#color}} ('{{global.color.turquoiseblue}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.turquoiseblue}}').lighten(26) {{/color}}"
+        "double_lite_fill": "{{#color}} ('{{global.color.turquoiseblue}}').lighten(26) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.turquoiseblue}}').saturate(9.6154).lighten(26) {{/color}}"
       }
     },
     "c6": {
@@ -233,7 +240,8 @@
       "value": {
         "fill": "{{ global.color.heliotrope }}",
         "lite_fill": "{{#color}} ('{{global.color.heliotrope}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.heliotrope}}').lighten(22) {{/color}}"
+        "double_lite_fill": "{{#color}} ('{{global.color.heliotrope}}').lighten(22) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.heliotrope}}').saturate(9.6154).lighten(22) {{/color}}"
       }
     },
     "c7": {
@@ -244,7 +252,8 @@
       "value": {
         "fill": "{{ global.color.lavendermagenta }}",
         "lite_fill": "{{#color}} ('{{global.color.lavendermagenta}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.lavendermagenta}}').lighten(22) {{/color}}"
+        "double_lite_fill": "{{#color}} ('{{global.color.lavendermagenta}}').lighten(22) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.lavendermagenta}}').saturate(9.6154).lighten(22) {{/color}}"
       }
     },
     "c8": {
@@ -255,7 +264,8 @@
       "value": {
         "fill": "{{ global.color.black }}",
         "lite_fill": "{{#color}} ('{{global.color.black}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.black}}').lighten(50) {{/color}}"
+        "double_lite_fill": "{{#color}} ('{{global.color.black}}').lighten(50) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.black}}').saturate(9.6154).lighten(50) {{/color}}"
       }
     },
     "c9": {
@@ -266,7 +276,8 @@
       "value": {
         "fill": "{{ global.color.white }}",
         "lite_fill": "{{#color}} ('{{global.color.white}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.white}}').lighten(22) {{/color}}"
+        "double_lite_fill": "{{#color}} ('{{global.color.white}}').lighten(22) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.white}}').saturate(9.6154).lighten(22) {{/color}}"
       }
     },
     "colors": {
@@ -286,16 +297,43 @@
       "value": {
       }
     },
-    "boxed": {
+    "normal": {
+      "name":"",
       "children": [
         "colors"
       ],
       "value": {
       }
     },
-    "tapped": {
+    "zoom": {
+      "name":"bg",
       "children": [
         "colors"
+      ],
+      "value": {
+        "zoom_out": true,
+        "zoom": 30
+      }
+    },
+    "zooms": {
+      "name":"",
+      "children": [
+        "normal",
+        "zoom"
+      ],
+      "value": {
+      }
+    },
+    "boxed": {
+      "children": [
+        "zooms"
+      ],
+      "value": {
+      }
+    },
+    "tapped": {
+      "children": [
+        "zooms"
       ],
       "value": {
         "tape": true
@@ -303,7 +341,7 @@
     },
     "circled": {
       "children": [
-        "colors"
+        "zooms"
       ],
       "value": {
         "circled_git" : true
@@ -311,7 +349,7 @@
     },
     "cubed": {
       "children": [
-        "colors"
+        "zooms"
       ],
       "value": {
         "border_cubed_git" : true
@@ -319,7 +357,7 @@
     },
     "3dcube": {
       "children": [
-        "colors"
+        "zooms"
       ],
       "value": {
         "cube_3d_git" : true
@@ -327,20 +365,20 @@
     },
     "2dcube": {
       "children": [
-        "colors"
+        "zooms"
       ],
       "value": {
         "cubed_git" : true
       }
     },
-    "logo-3d": {
+    "3d": {
       "children": [
         "boxed", "tapped", "circled", "cubed", "3dcube", "2dcube"
       ],
       "value": {
       }
     },
-    "logo-flat": {
+    "flat": {
       "children": [
         "boxed", "tapped", "circled", "cubed", "3dcube", "2dcube"
       ],
@@ -349,6 +387,13 @@
         "shadow_left_opacity": "0",
         "shadow_right_opacity": "0",
         "transform_inside": "translate(0,7.3)"
+      }
+    },
+    "logo": {
+      "children": [
+        "3d", "flat"
+      ],
+      "value": {
       }
     }
   }

@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="{{ width }}" height="{{ height }}" viewBox="{{ viewbox_x }} {{ viewbox_y }} {{ viewbox_width }} {{ viewbox_height }}">
+{% if zoom_out %}<rect x="{{ viewbox_x }}" y="{{ viewbox_y }}" width="{{ viewbox_width }}" height="{{ viewbox_height }}" fill="{{ document_background_fill }}" />{% endif %}
 <g transform="{{ transform }}">
   <path d="M81.8 5L5 28.4v107.4L81.8 159l77-23.8L159 28z" fill="{{ background_fill }}"/>
 	{% if cube_front %}<path  fill="none" stroke="{{ lite_fill }}" stroke-width="{{ stroke_width }}" stroke-linecap="round" stroke-linejoin="round" d="M5 31L82 55.3m0 0L159 30.6M81.8 55.2v102"/>{% endif %}
