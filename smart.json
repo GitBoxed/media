@@ -3,7 +3,7 @@
     "color": {
       "white": "#ffffff",
       "shadow": "#494949",
-      "black": "#333333",
+      "black": "#000000",
       "tundora": "#4e4e4e",
       "regentgray": "#8799A7",
       "cornflowerblue": "#7987f4",
@@ -195,6 +195,26 @@
         "double_lite_fill": "{{#color}} ('{{global.color.lavendermagenta}}').lighten(22) {{/color}}"
       }
     },
+    "c8": {
+      "children": [
+        "icon-text"
+      ],
+      "value": {
+        "fill": "{{ global.color.black }}",
+        "lite_fill": "{{#color}} ('{{global.color.black}}').saturate(0.8945).lighten(15.4902) {{/color}}",
+        "double_lite_fill": "{{#color}} ('{{global.color.black}}').lighten(22) {{/color}}"
+      }
+    },
+    "c9": {
+      "children": [
+        "icon-text"
+      ],
+      "value": {
+        "fill": "{{ global.color.white }}",
+        "lite_fill": "{{#color}} ('{{global.color.white}}').saturate(0.8945).lighten(15.4902) {{/color}}",
+        "double_lite_fill": "{{#color}} ('{{global.color.white}}').lighten(22) {{/color}}"
+      }
+    },
     "colors": {
       "name": "",
       "children": [
@@ -205,12 +225,21 @@
         "c4",
         "c5",
         "c6",
-        "c7"
+        "c7",
+        "c8",
+        "c9"
       ],
       "value": {
       }
     },
     "boxed": {
+      "children": [
+        "colors"
+      ],
+      "value": {
+      }
+    },
+    "tapped": {
       "children": [
         "colors"
       ],
@@ -256,14 +285,14 @@
     },
     "logo_3d": {
       "children": [
-        "boxed", "circled-git", "cubed-git", "cube3d-git", "flatcube-git"
+        "boxed", "tapped", "circled-git", "cubed-git", "cube3d-git", "flatcube-git"
       ],
       "value": {
       }
     },
     "logo_flat": {
       "children": [
-        "boxed", "circled-git", "cubed-git", "cube3d-git", "flatcube-git"
+        "boxed", "tapped", "circled-git", "cubed-git", "cube3d-git", "flatcube-git"
       ],
       "value": {
         "cube_front": false,
