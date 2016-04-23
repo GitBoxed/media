@@ -45,6 +45,48 @@
       ],
       "svg": {
         "dest": "svg"
+      },
+      "png": {
+        "dest": "png",
+        "scale": {
+          "width": [164,400,500],
+          "height": [100, 256]
+        },
+        "retina": true
+      },
+      "icon": {
+        "dest": "icon",
+        "source": "{{{ global.files.dest }}}\/png\/logo-3d-2dcube-regentgray-h256@2x.png",
+        "config": {
+          "appName": "{{ package.name }}",
+          "appDescription": "{{ package.description }}",
+          "developerName": "{{ package.author }}",
+          "developerURL": "{{ package.homepage }}",
+          "background": "{{ global.color.white }}",
+          "path": "{{{ global.files.dest }}}\/icon",
+          "url": "{{ package.homepage }}",
+          "display": "standalone",
+          "orientation": "portrait",
+          "version": 1,
+          "logging": false,
+          "online": false,
+          "replace": true
+        }
+      },
+      "sprite": {
+        "dest": "sprite",
+        "source": "{{{ global.files.dest }}}\/svg\/*.svg",
+        "config": {
+          "mode": {
+            "view": {
+              "bust": false,
+              "render": {
+                "css": true
+              }
+            },
+            "symbol": true
+          }
+        }
       }
     }
   ],
