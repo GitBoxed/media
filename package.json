@@ -1,0 +1,26 @@
+{
+  "name": "gitboxed-media",
+  "version": "0.1.0",
+  "homepage": "https://ibuild.io",
+  "description": "GitBoxed logo and artwork http://gitboxed.io",
+  "author": "Adnan M.Sagar, PhD. <adnan@ibuild.io>",
+  "license" : "UNLICENSED",
+  "keywords": [
+    "ibuild.io",
+    "websemantics.io",
+    "artwork",
+    "media",
+    "logo"
+  ],
+  "scripts": {
+    "postinstall": "gulp"
+  },
+  "repository": "gitboxed/media",
+  "bugs": {
+    "url": "https://github.com/gitboxed/media/issues"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-svg-smart": "*"
+  }
+}
