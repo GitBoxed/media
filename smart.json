@@ -49,14 +49,14 @@
       "png": {
         "dest": "png",
         "scale": {
-          "width": [500],
-          "height": [256]
+          "width": [300, 600],
+          "height": [128, 200]
         },
         "retina": true
       },
       "icon": {
         "dest": "icon",
-        "source": "{{{ global.files.dest }}}\/png\/logo-3d-2dcube-regentgray-h256@2x.png",
+        "source": "{{{ global.files.dest }}}\/png\/logo-3d-2dcube-regentgray-h200@2x.png",
         "config": {
           "appName": "{{ package.name }}",
           "appDescription": "{{ package.description }}",
