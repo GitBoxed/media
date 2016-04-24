@@ -49,7 +49,7 @@
       "png": {
         "dest": "png",
         "scale": {
-          "width": [600],
+          "width": [500],
           "height": [200]
         },
         "retina": true
