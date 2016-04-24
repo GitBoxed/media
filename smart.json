@@ -5,13 +5,21 @@
       "shadow": "#494949",
       "black": "#000000",
       "tundora": "#4e4e4e",
+      "firebush": "#e89920",
       "regentgray": "#8799A7",
       "cornflowerblue": "#7987f4",
       "tangerine": "#ff9f86",
       "pictonblue": "#27acf0",
       "turquoiseblue": "#6ad0e6",
       "heliotrope": "#c086ff",
-      "lavendermagenta": "#eb99e0"
+      "lavendermagenta": "#eb99e0",
+      "boxed": "#367dbc",
+      "symbol": "#73371e",
+      "primary": "{{ color.brown }}",
+      "brown": "#fece99",
+      "fresh": "#ddec87",
+      "hot": "#ebb086",
+      "cloudy": "#c1c1c1"
     },
     "files": {
       "dist": "dist",
@@ -26,7 +34,9 @@
       "height": 164,
       "text_width": 646,
       "stroke_width" : 4.3,
-      "transform": "translate(0)"
+      "transform": "translate(0)",
+      "shadow_opacity":  "0.2",
+      "tape_opacity":  "0.4"
     },
     "bot": {
       "name": "iAyeBot",
@@ -40,11 +50,9 @@
       "description": "GitBoxed logo and artwork.",
       "source": "{{ global.files.source }}\/logo.template",
       "dest": "{{ global.files.dest }}",
-      "data":[
-        "logo"
-      ],
+      "data":["logos"],
       "svg": {
-        "dest": "svg"
+        "dest": "svg/logo"
       },
       "png": {
         "dest": "png",
@@ -54,7 +62,7 @@
         },
         "retina": true
       },
-      "icon": {
+      "icon1": {
         "dest": "icon",
         "source": "{{{ global.files.dest }}}\/png\/logo-3d-2dcube-regentgray-h200@2x.png",
         "config": {
@@ -73,7 +81,116 @@
           "replace": true
         }
       },
-      "sprite": {
+      "sprite1": {
+        "dest": "sprite",
+        "source": "{{{ global.files.dest }}}\/svg\/*.svg",
+        "config": {
+          "mode": {
+            "view": {
+              "bust": false,
+              "render": {
+                "css": true
+              }
+            },
+            "symbol": true
+          }
+        }
+      }
+    },
+    {
+      "description": "GitBoxed bots artwork.",
+      "source": "{{ global.files.source }}\/logo.template",
+      "dest": "{{ global.files.dest }}",
+      "data":[
+        "bots"
+      ],
+      "svg": {
+        "dest": "svg/bot"
+      },
+      "png": {
+        "dest": "png",
+        "scale": {
+          "width": [500],
+          "height": [200]
+        },
+        "retina": true
+      },
+      "icon1": {
+        "dest": "icon",
+        "source": "{{{ global.files.dest }}}\/png\/logo-3d-2dcube-regentgray-h200@2x.png",
+        "config": {
+          "appName": "{{ package.name }}",
+          "appDescription": "{{ package.description }}",
+          "developerName": "{{ package.author }}",
+          "developerURL": "{{ package.homepage }}",
+          "background": "{{ global.color.white }}",
+          "path": "{{{ global.files.dest }}}\/icon",
+          "url": "{{ package.homepage }}",
+          "display": "standalone",
+          "orientation": "portrait",
+          "version": 1,
+          "logging": false,
+          "online": false,
+          "replace": true
+        }
+      },
+      "sprite1": {
+        "dest": "sprite",
+        "source": "{{{ global.files.dest }}}\/svg\/*.svg",
+        "config": {
+          "mode": {
+            "view": {
+              "bust": false,
+              "render": {
+                "css": true
+              }
+            },
+            "symbol": true
+          }
+        }
+      }
+    },
+    {
+      "description": "GitBoxed carton artwork",
+      "source": "{{{ global.files.source }}}\/carton.template",
+      "dest": "{{{ global.files.dest }}}",
+      "data":[
+        "box", "taped-r", "taped-l", "symbol-r", "symbol-l", "boxed-r", "boxed-l", "box-o",
+        "uuuu", "uuum", "uuud", "uumu", "uumm", "uumd", "uudu", "uudm", "uudd", "umuu", "umum", "umud", "ummu", "ummm", "ummd", "umdu", "umdm", "umdd", "uduu", "udum", "udud", "udmu", "udmm", "udmd", "uddu", "uddm", "uddd",
+        "muuu", "muum", "muud", "mumu", "mumm", "mumd", "mudu", "mudm", "mudd", "mmuu", "mmum", "mmud", "mmmu", "mmmm", "mmmd", "mmdu", "mmdm", "mmdd", "mduu", "mdum", "mdud", "mdmu", "mdmm", "mdmd", "mddu", "mddm", "mddd",
+        "duuu", "duum", "duud", "dumu", "dumm", "dumd", "dudu", "dudm", "dudd", "dmuu", "dmum", "dmud", "dmmu", "dmmm", "dmmd", "dmdu", "dmdm", "dmdd", "dduu", "ddum", "ddud", "ddmu", "ddmm", "ddmd", "dddu", "dddm", "dddd"
+      ],
+      "svg": {
+        "dest": "svg/carton"
+      },
+      "png": {
+        "dest": "png",
+        "scale": {
+          "width": [500],
+          "height": [200]
+        },
+        "retina": true
+      },
+      "icon1": {
+        "dest": "icon",
+        "source": "{{{ global.files.dest }}}\/png\/logo-invert-yellow-h256@2x.png",
+        "config": {
+          "appName": "{{ package.name }}",
+          "appDescription": "{{ package.description }}",
+          "developerName": "{{ package.author }}",
+          "developerURL": "{{ package.homepage }}",
+          "background": "{{ global.color.white }}",
+          "path": "{{{ global.files.dest }}}\/icon",
+          "url": "{{ package.homepage }}",
+          "display": "standalone",
+          "orientation": "portrait",
+          "version": 1,
+          "logging": false,
+          "online": false,
+          "replace": true
+        }
+      },
+      "sprite1": {
         "dest": "sprite",
         "source": "{{{ global.files.dest }}}\/svg\/*.svg",
         "config": {
@@ -94,7 +211,7 @@
     "dest": ".",
     "template": "{{ global.files.source }}\/index.template",
     "filename": "index.html",
-    "title": "GitBoxed Logos",
+    "title": "GitBoxed Logo & Artwork",
     "description": "{{ package.description }}",
     "github_url": "{{& package.repository }}",
     "link": {
@@ -109,11 +226,15 @@
     }
   },
   "data": {
+    "comment": "---------------------[ LOGO & BOT DATA ]--------------------------------------",
     "default": {
       "name": "",
+      "description": "Values to drive GitBoxed logos generation",
       "value": {
+        "bot": false,
         "text": false,
-        "tape": false,
+        "left_tape": false,
+        "right_tape": false,
         "cube_front": true,
         "zoom_out": false,
         "circled_git": false,
@@ -126,9 +247,9 @@
         "shadow_left_opacity": ".15",
         "shadow_right_opacity": ".07",
         "fill": "{{ global.color.regentgray }}",
-        "lite_fill": "{{#color}} ('{{global.color.regentgray}}').saturate(0.8945).lighten(15.4902) {{/color}}",
+        "lite_fill": "{{#color}} ('{{global.color.regentgray}}').saturate(0.9).lighten(15) {{/color}}",
         "double_lite_fill": "{{#color}} ('{{global.color.regentgray}}').lighten(28) {{/color}}",
-        "background_fill": "{{ global.color.white }}",
+        "background_fill": "{{#color}} ('{{global.color.regentgray}}').saturate(9.6154).lighten(31.3725) {{/color}}",
         "document_background_fill": "{{#color}} ('{{global.color.regentgray}}').saturate(9.6154).lighten(31.3725) {{/color}}",
         "zoom": "{{ global.default.zoom }}",
         "transform": "{{ global.default.transform }}",
@@ -136,38 +257,26 @@
         "stroke_width": "{{ global.default.stroke_width }}"
       }
     },
-    "icon": {
+    "bofault": {
       "name": "",
+      "description": "Values to drive GitBoxed bots generation",
       "children": [
         "default"
       ],
       "value": {
-
-      }
-    },
-    "text": {
-      "name": "full",
-      "children": [
-        "default"
-      ],
-      "value": {
-        "text": true,
-        "width": "{{ global.default.text_width }}"
-      }
-    },
-    "icon-text": {
-      "name": "",
-      "children": [
-        "icon",
-        "text"
-      ],
-      "value": {
+        "bot": false,
+        "base": false,
+        "male": false,
+        "female": false,
+        "eye_fill": "{{ global.color.white }}",
+        "fork_fill": "{{ global.color.white }}",
+        "fork_opacity": ".53"
       }
     },
     "c0": {
       "name":"regentgray",
       "children": [
-        "icon-text"
+        "bofault"
       ],
       "value": {
       }
@@ -175,108 +284,130 @@
     "c1": {
       "name":"tundora",
       "children": [
-        "icon-text"
+        "bofault"
       ],
       "value": {
         "fill": "{{ global.color.tundora }}",
-        "lite_fill": "{{#color}} ('{{global.color.tundora}}').saturate(0.8945).lighten(15.4902) {{/color}}",
+        "lite_fill": "{{#color}} ('{{global.color.tundora}}').saturate(0.9).lighten(15) {{/color}}",
         "double_lite_fill": "{{#color}} ('{{global.color.tundora}}').lighten(40) {{/color}}",
+        "background_fill": "{{#color}} ('{{global.color.tundora}}').saturate(9.6154).lighten(40) {{/color}}",
         "document_background_fill": "{{#color}} ('{{global.color.tundora}}').saturate(9.6154).lighten(40) {{/color}}"
       }
     },
     "c2": {
-      "name":"cornflowerblue",
+      "name":"firebush",
       "children": [
-        "icon-text"
+        "bofault"
       ],
       "value": {
-        "fill": "{{ global.color.cornflowerblue }}",
-        "lite_fill": "{{#color}} ('{{global.color.cornflowerblue}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.cornflowerblue}}').lighten(22) {{/color}}",
-        "document_background_fill": "{{#color}} ('{{global.color.cornflowerblue}}').saturate(9.6154).lighten(22) {{/color}}"
+        "fill": "{{ global.color.firebush }}",
+        "lite_fill": "{{#color}} ('{{global.color.firebush}}').saturate(0.9).lighten(15) {{/color}}",
+        "double_lite_fill": "{{#color}} ('{{global.color.firebush}}').lighten(40) {{/color}}",
+        "background_fill": "{{#color}} ('{{global.color.firebush}}').saturate(9.6154).lighten(40) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.firebush}}').saturate(9.6154).lighten(40) {{/color}}"
       }
     },
     "c3": {
-      "name":"tangerine",
+      "name":"cornflowerblue",
       "children": [
-        "icon-text"
+        "bofault"
       ],
       "value": {
-        "fill": "{{ global.color.tangerine }}",
-        "lite_fill": "{{#color}} ('{{global.color.tangerine}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.tangerine}}').lighten(22) {{/color}}",
-        "document_background_fill": "{{#color}} ('{{global.color.tangerine}}').saturate(9.6154).lighten(22) {{/color}}"
+        "fill": "{{ global.color.cornflowerblue }}",
+        "lite_fill": "{{#color}} ('{{global.color.cornflowerblue}}').saturate(0.9).lighten(15) {{/color}}",
+        "double_lite_fill": "{{#color}} ('{{global.color.cornflowerblue}}').lighten(22) {{/color}}",
+        "background_fill": "{{#color}} ('{{global.color.cornflowerblue}}').saturate(9.6154).lighten(22) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.cornflowerblue}}').saturate(9.6154).lighten(22) {{/color}}"
       }
     },
     "c4": {
-      "name":"pictonblue",
+      "name":"tangerine",
       "children": [
-        "icon-text"
+        "bofault"
       ],
       "value": {
-        "fill": "{{ global.color.pictonblue }}",
-        "lite_fill": "{{#color}} ('{{global.color.pictonblue}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.pictonblue}}').lighten(30) {{/color}}",
-        "document_background_fill": "{{#color}} ('{{global.color.pictonblue}}').saturate(9.6154).lighten(30) {{/color}}"
+        "fill": "{{ global.color.tangerine }}",
+        "lite_fill": "{{#color}} ('{{global.color.tangerine}}').saturate(0.9).lighten(15) {{/color}}",
+        "double_lite_fill": "{{#color}} ('{{global.color.tangerine}}').lighten(22) {{/color}}",
+        "background_fill": "{{#color}} ('{{global.color.tangerine}}').saturate(9.6154).lighten(20) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.tangerine}}').saturate(9.6154).lighten(20) {{/color}}"
       }
     },
     "c5": {
-      "name":"turquoiseblue",
+      "name":"pictonblue",
       "children": [
-        "icon-text"
+        "bofault"
       ],
       "value": {
-        "fill": "{{ global.color.turquoiseblue }}",
-        "lite_fill": "{{#color}} ('{{global.color.turquoiseblue}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.turquoiseblue}}').lighten(26) {{/color}}",
-        "document_background_fill": "{{#color}} ('{{global.color.turquoiseblue}}').saturate(9.6154).lighten(26) {{/color}}"
+        "fill": "{{ global.color.pictonblue }}",
+        "lite_fill": "{{#color}} ('{{global.color.pictonblue}}').saturate(0.9).lighten(15) {{/color}}",
+        "double_lite_fill": "{{#color}} ('{{global.color.pictonblue}}').lighten(30) {{/color}}",
+        "background_fill": "{{#color}} ('{{global.color.pictonblue}}').saturate(9.6154).lighten(30) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.pictonblue}}').saturate(9.6154).lighten(30) {{/color}}"
       }
     },
     "c6": {
-      "name":"heliotrope",
+      "name":"turquoiseblue",
       "children": [
-        "icon-text"
+        "bofault"
       ],
       "value": {
-        "fill": "{{ global.color.heliotrope }}",
-        "lite_fill": "{{#color}} ('{{global.color.heliotrope}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.heliotrope}}').lighten(22) {{/color}}",
-        "document_background_fill": "{{#color}} ('{{global.color.heliotrope}}').saturate(9.6154).lighten(22) {{/color}}"
+        "fill": "{{ global.color.turquoiseblue }}",
+        "lite_fill": "{{#color}} ('{{global.color.turquoiseblue}}').saturate(0.9).lighten(15) {{/color}}",
+        "double_lite_fill": "{{#color}} ('{{global.color.turquoiseblue}}').lighten(26) {{/color}}",
+        "background_fill": "{{#color}} ('{{global.color.turquoiseblue}}').saturate(9.6154).lighten(26) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.turquoiseblue}}').saturate(9.6154).lighten(26) {{/color}}"
       }
     },
     "c7": {
-      "name":"lavendermagenta",
+      "name":"heliotrope",
       "children": [
-        "icon-text"
+        "bofault"
       ],
       "value": {
-        "fill": "{{ global.color.lavendermagenta }}",
-        "lite_fill": "{{#color}} ('{{global.color.lavendermagenta}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.lavendermagenta}}').lighten(22) {{/color}}",
-        "document_background_fill": "{{#color}} ('{{global.color.lavendermagenta}}').saturate(9.6154).lighten(22) {{/color}}"
+        "fill": "{{ global.color.heliotrope }}",
+        "lite_fill": "{{#color}} ('{{global.color.heliotrope}}').saturate(0.9).lighten(15) {{/color}}",
+        "double_lite_fill": "{{#color}} ('{{global.color.heliotrope}}').lighten(22) {{/color}}",
+        "background_fill": "{{#color}} ('{{global.color.heliotrope}}').saturate(9.6154).lighten(22) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.heliotrope}}').saturate(9.6154).lighten(22) {{/color}}"
       }
     },
     "c8": {
-      "name":"black",
+      "name":"lavendermagenta",
       "children": [
-        "icon-text"
+        "bofault"
       ],
       "value": {
-        "fill": "{{ global.color.black }}",
-        "lite_fill": "{{#color}} ('{{global.color.black}}').saturate(0.8945).lighten(15.4902) {{/color}}",
-        "double_lite_fill": "{{#color}} ('{{global.color.black}}').lighten(50) {{/color}}",
-        "document_background_fill": "{{#color}} ('{{global.color.black}}').saturate(9.6154).lighten(50) {{/color}}"
+        "fill": "{{ global.color.lavendermagenta }}",
+        "lite_fill": "{{#color}} ('{{global.color.lavendermagenta}}').saturate(0.9).lighten(15) {{/color}}",
+        "double_lite_fill": "{{#color}} ('{{global.color.lavendermagenta}}').lighten(22) {{/color}}",
+        "background_fill": "{{#color}} ('{{global.color.lavendermagenta}}').saturate(9.6154).lighten(22) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.lavendermagenta}}').saturate(9.6154).lighten(22) {{/color}}"
       }
     },
     "c9": {
+      "name":"black",
+      "children": [
+        "bofault"
+      ],
+      "value": {
+        "fill": "{{ global.color.black }}",
+        "lite_fill": "{{#color}} ('{{global.color.black}}').saturate(0.9).lighten(15) {{/color}}",
+        "double_lite_fill": "{{#color}} ('{{global.color.black}}').lighten(50) {{/color}}",
+        "background_fill": "{{#color}} ('{{global.color.black}}').saturate(9.6154).lighten(50) {{/color}}",
+        "document_background_fill": "{{#color}} ('{{global.color.black}}').saturate(9.6154).lighten(50) {{/color}}"
+      }
+    },
+    "c10": {
       "name":"white",
       "children": [
-        "icon-text"
+        "bofault"
       ],
       "value": {
         "fill": "{{ global.color.white }}",
-        "lite_fill": "{{#color}} ('{{global.color.white}}').saturate(0.8945).lighten(15.4902) {{/color}}",
+        "lite_fill": "{{#color}} ('{{global.color.white}}').saturate(0.9).lighten(15) {{/color}}",
         "double_lite_fill": "{{#color}} ('{{global.color.white}}').lighten(22) {{/color}}",
+        "background_fill": "{{#color}} ('{{global.color.white}}').saturate(9.6154).lighten(22) {{/color}}",
         "document_background_fill": "{{#color}} ('{{global.color.white}}').saturate(9.6154).lighten(22) {{/color}}"
       }
     },
@@ -292,15 +423,45 @@
         "c6",
         "c7",
         "c8",
-        "c9"
+        "c9",
+        "c10"
       ],
       "value": {
+      }
+    },
+    "icon": {
+      "name": "",
+      "children": [
+        "colors"
+      ],
+      "value": {
+
+      }
+    },
+    "text": {
+      "name": "full",
+      "children": [
+        "colors"
+      ],
+      "value": {
+        "text": true,
+        "width": "{{ global.default.text_width }}"
+      }
+    },
+    "icon-text": {
+      "name": "",
+      "children": [
+        "icon",
+        "text"
+      ],
+      "value": {
+        "background_fill": "{{ global.color.white }}"
       }
     },
     "normal": {
       "name":"",
       "children": [
-        "colors"
+        "icon-text"
       ],
       "value": {
       }
@@ -308,7 +469,7 @@
     "zoom": {
       "name":"bg",
       "children": [
-        "colors"
+        "icon-text"
       ],
       "value": {
         "zoom_out": true,
@@ -336,7 +497,7 @@
         "zooms"
       ],
       "value": {
-        "tape": true
+        "left_tape": true
       }
     },
     "circled": {
@@ -389,12 +550,322 @@
         "transform_inside": "translate(0,7.3)"
       }
     },
-    "logo": {
+    "logos": {
+      "name":"logo",
+      "description": "Top data node of all Logo releated data points",
       "children": [
         "3d", "flat"
       ],
       "value": {
       }
-    }
+    },
+    "bot-head": {
+      "name": "head",
+      "children": [
+        "colors"
+      ],
+      "value": {
+      }
+    },
+    "bot-head-base": {
+      "name": "",
+      "children": [
+        "colors"
+      ],
+      "value": {
+        "base": true,
+        "zoom": 19,
+        "transform": "translate(0,-30)"
+      }
+    },
+    "bot": {
+      "name": "",
+      "children": [
+        "bot-head",
+        "bot-head-base"
+      ],
+      "value": {
+        "bot": true
+      }
+    },
+    "flat-bot": {
+      "name": "flat",
+      "children": [
+        "bot"
+      ],
+      "value": {
+        "cube_front": false
+      }
+    },
+    "evit": {
+      "children": [
+        "bot",
+        "flat-bot"
+      ],
+      "value": {
+        "female": true
+      }
+    },
+    "adit": {
+      "children": [
+        "bot",
+        "flat-bot"
+      ],
+      "value": {
+        "male": true
+      }
+    },
+    "bots": {
+      "name": "bot",
+      "children": [
+        "evit",
+        "adit"
+      ],
+      "value": {
+        "right_tape": true
+      }
+    },
+    "cartault": {
+      "name": "",
+      "value": {
+        "tape_right": false,
+        "tape_left": false,
+        "south_up_tape" : false,
+        "east_up_tape" : false,
+        "symbols_right": false,
+        "symbols_left": false,
+        "boxed_right": false,
+        "boxed_left": false,
+        "east_down": false,
+        "east_middle": false,
+        "north_middle": false,
+        "north_down": false,
+        "north_up": false,
+        "west_middle": false,
+        "south_down": false,
+        "east_up": false,
+        "south_middle": false,
+        "west_down": false,
+        "south_up": false,
+        "west_up": false,
+        "open_top": false,
+        "fill": "{{ global.color.primary }}",
+        "dark_fill": "{{#color}} ('{{global.color.primary}}').desaturate(28).darken(6) {{/color}}",
+        "lite_fill": "{{#color}} ('{{global.color.primary}}').saturate(1.9).lighten(2.2) {{/color}}",
+        "inside_fill": "{{#color}} ('{{global.color.primary}}').desaturate(18.7).darken(8.2) {{/color}}",
+        "inside_dark_fill": "{{#color}} ('{{global.color.primary}}').desaturate(36.2).darken(13.7) {{/color}}",
+        "flap_top_lite_fill": "{{#color}} ('{{global.color.primary}}').saturate(1.94).lighten(2.7) {{/color}}",
+        "flap_bottom_dark_fill": "{{#color}} ('{{global.color.primary}}').desaturate(74).darken(30) {{/color}}",
+        "flap_bottom_dark_fill_2": "{{#color}} ('{{global.color.primary}}').desaturate(45).darken(11.5) {{/color}}",
+        "flap_south_dark_edge_fill": "{{#color}} ('{{global.color.primary}}').saturate(1.94).lighten(3.14) {{/color}}",
+        "flap_south_lite_fill": "{{#color}} ('{{global.color.primary}}').saturate(1.94).lighten(3.92) {{/color}}",
+        "flap_east_west_lite_fill": "{{#color}} ('{{global.color.primary}}').saturate(1.94).lighten(2.74) {{/color}}",
+        "symbol_fill": "{{ global.color.symbol }}",
+        "symbol_dark_fill": "{{#color}} ('{{ global.color.symbol }}').desaturate(0.41).darken(2.156) {{/color}}",
+        "shadow_fill": "{{ global.color.shadow }}",
+        "shadow_opacity": "{{ global.default.shadow_opacity }}",
+        "boxed_fill": "{{ global.color.boxed }}",
+        "boxed_background_fill": "{{#color}} ('{{global.color.white}}').darken(9) {{/color}}",
+        "tape_fill": "{{#color}} ('{{global.color.white}}').darken(3) {{/color}}",
+        "tape_opacity": "{{ global.default.tape_opacity }}",
+        "zoom": "{{ global.default.zoom }}",
+        "width": "{{ global.default.width }}",
+        "height": "{{ global.default.height }}"
+      }
+    },
+    "box": {
+      "children": [
+        "cartault"
+      ],
+      "value": {
+
+      }
+    },
+    "symbol-r": {
+      "children": [
+        "box"
+      ],
+      "value": {
+        "symbols_right": true
+      }
+    },
+    "symbol-l": {
+      "children": [
+        "box"
+      ],
+      "value": {
+        "symbols_left": true
+      }
+    },
+    "boxed-r": {
+      "children": [
+        "box",
+        "symbol-l",
+        "symbol-r"
+      ],
+      "value": {
+        "boxed_right": true
+      }
+    },
+    "boxed-l": {
+      "children": [
+        "box",
+        "symbol-l",
+        "symbol-r"
+      ],
+      "value": {
+        "boxed_left": true
+      }
+    },
+    "taped-r": {
+      "children": [
+        "box",
+        "boxed-l",
+        "symbol-l",
+        "symbol-r"
+      ],
+      "value": {
+        "tape_right": true
+      }
+    },
+    "taped-l": {
+      "children": [
+        "box",
+        "boxed-r",
+        "symbol-l",
+        "symbol-r"
+      ],
+      "value": {
+        "tape_left": true
+      }
+    },
+    "box-o": {
+      "children": [
+        "box",
+        "taped-l",
+        "taped-r"
+      ],
+      "value": {
+        "open_top": true
+      }
+    },
+    "open-only": {
+      "children": [
+        "box"
+      ],
+      "value": {
+        "open_top": true
+      }
+    },
+    "open-tape-l": {
+      "children": [
+        "taped-l"
+      ],
+      "value": {
+        "east_up_tape": true
+      }
+    },
+    "open-tape-r": {
+      "children": [
+        "taped-r"
+      ],
+      "value": {
+        "south_up_tape": true
+      }
+    },
+    "usual": {
+      "name": "",
+      "children": ["open-only","open-tape-l","open-tape-r"],
+      "value": {"open_top": true}
+    },
+    "north-east-south-west": {
+      "name": "",
+      "children": ["open-only","open-tape-l","open-tape-r"],
+      "value": {"open_top": true}
+    },
+    "uuuu": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_up": true,"south_up": true,"west_up": true}},
+    "uuum": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_up": true,"south_up": true,"west_middle": true}},
+    "uuud": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_up": true,"south_up": true,"west_down": true}},
+    "uumu": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_up": true,"south_middle": true,"west_up": true}},
+    "uumm": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_up": true,"south_middle": true,"west_middle": true}},
+    "uumd": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_up": true,"south_middle": true,"west_down": true}},
+    "uudu": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_up": true,"south_down": true,"west_up": true}},
+    "uudm": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_up": true,"south_down": true,"west_middle": true}},
+    "uudd": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_up": true,"south_down": true,"west_down": true}},
+    "umuu": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_middle": true,"south_up": true,"west_up": true}},
+    "umum": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_middle": true,"south_up": true,"west_middle": true}},
+    "umud": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_middle": true,"south_up": true,"west_down": true}},
+    "ummu": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_middle": true,"south_middle": true,"west_up": true}},
+    "ummm": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_middle": true,"south_middle": true,"west_middle": true}},
+    "ummd": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_middle": true,"south_middle": true,"west_down": true}},
+    "umdu": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_middle": true,"south_down": true,"west_up": true}},
+    "umdm": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_middle": true,"south_down": true,"west_middle": true}},
+    "umdd": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_middle": true,"south_down": true,"west_down": true}},
+    "uduu": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_down": true,"south_up": true,"west_up": true}},
+    "udum": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_down": true,"south_up": true,"west_middle": true}},
+    "udud": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_down": true,"south_up": true,"west_down": true}},
+    "udmu": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_down": true,"south_middle": true,"west_up": true}},
+    "udmm": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_down": true,"south_middle": true,"west_middle": true}},
+    "udmd": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_down": true,"south_middle": true,"west_down": true}},
+    "uddu": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_down": true,"south_down": true,"west_up": true}},
+    "uddm": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_down": true,"south_down": true,"west_middle": true}},
+    "uddd": {"children": ["north-east-south-west"],"value": {"north_up": true,"east_down": true,"south_down": true,"west_down": true}},
+    "muuu": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_up": true,"south_up": true,"west_up": true}},
+    "muum": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_up": true,"south_up": true,"west_middle": true}},
+    "muud": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_up": true,"south_up": true,"west_down": true}},
+    "mumu": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_up": true,"south_middle": true,"west_up": true}},
+    "mumm": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_up": true,"south_middle": true,"west_middle": true}},
+    "mumd": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_up": true,"south_middle": true,"west_down": true}},
+    "mudu": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_up": true,"south_down": true,"west_up": true}},
+    "mudm": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_up": true,"south_down": true,"west_middle": true}},
+    "mudd": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_up": true,"south_down": true,"west_down": true}},
+    "mmuu": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_middle": true,"south_up": true,"west_up": true}},
+    "mmum": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_middle": true,"south_up": true,"west_middle": true}},
+    "mmud": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_middle": true,"south_up": true,"west_down": true}},
+    "mmmu": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_middle": true,"south_middle": true,"west_up": true}},
+    "mmmm": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_middle": true,"south_middle": true,"west_middle": true}},
+    "mmmd": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_middle": true,"south_middle": true,"west_down": true}},
+    "mmdu": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_middle": true,"south_down": true,"west_up": true}},
+    "mmdm": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_middle": true,"south_down": true,"west_middle": true}},
+    "mmdd": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_middle": true,"south_down": true,"west_down": true}},
+    "mduu": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_down": true,"south_up": true,"west_up": true}},
+    "mdum": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_down": true,"south_up": true,"west_middle": true}},
+    "mdud": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_down": true,"south_up": true,"west_down": true}},
+    "mdmu": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_down": true,"south_middle": true,"west_up": true}},
+    "mdmm": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_down": true,"south_middle": true,"west_middle": true}},
+    "mdmd": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_down": true,"south_middle": true,"west_down": true}},
+    "mddu": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_down": true,"south_down": true,"west_up": true}},
+    "mddm": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_down": true,"south_down": true,"west_middle": true}},
+    "mddd": {"children": ["north-east-south-west"],"value": {"north_middle": true,"east_down": true,"south_down": true,"west_down": true}},
+    "duuu": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_up": true,"south_up": true,"west_up": true}},
+    "duum": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_up": true,"south_up": true,"west_middle": true}},
+    "duud": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_up": true,"south_up": true,"west_down": true}},
+    "dumu": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_up": true,"south_middle": true,"west_up": true}},
+    "dumm": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_up": true,"south_middle": true,"west_middle": true}},
+    "dumd": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_up": true,"south_middle": true,"west_down": true}},
+    "dudu": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_up": true,"south_down": true,"west_up": true}},
+    "dudm": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_up": true,"south_down": true,"west_middle": true}},
+    "dudd": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_up": true,"south_down": true,"west_down": true}},
+    "dmuu": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_middle": true,"south_up": true,"west_up": true}},
+    "dmum": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_middle": true,"south_up": true,"west_middle": true}},
+    "dmud": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_middle": true,"south_up": true,"west_down": true}},
+    "dmmu": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_middle": true,"south_middle": true,"west_up": true}},
+    "dmmm": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_middle": true,"south_middle": true,"west_middle": true}},
+    "dmmd": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_middle": true,"south_middle": true,"west_down": true}},
+    "dmdu": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_middle": true,"south_down": true,"west_up": true}},
+    "dmdm": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_middle": true,"south_down": true,"west_middle": true}},
+    "dmdd": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_middle": true,"south_down": true,"west_down": true}},
+    "dduu": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_down": true,"south_up": true,"west_up": true}},
+    "ddum": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_down": true,"south_up": true,"west_middle": true}},
+    "ddud": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_down": true,"south_up": true,"west_down": true}},
+    "ddmu": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_down": true,"south_middle": true,"west_up": true}},
+    "ddmm": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_down": true,"south_middle": true,"west_middle": true}},
+    "ddmd": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_down": true,"south_middle": true,"west_down": true}},
+    "dddu": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_down": true,"south_down": true,"west_up": true}},
+    "dddm": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_down": true,"south_down": true,"west_middle": true}},
+    "dddd": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_down": true,"south_down": true,"west_down": true}}
+
+
+
   }
 }
