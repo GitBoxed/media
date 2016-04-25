@@ -54,8 +54,8 @@
       "svg": {
         "dest": "svg/logo"
       },
-      "png": {
-        "dest": "png",
+      "png1": {
+        "dest": "png1",
         "scale": {
           "width": [500],
           "height": [200]
@@ -63,7 +63,7 @@
         "retina": true
       },
       "icon1": {
-        "dest": "icon",
+        "dest": "icon1",
         "source": "{{{ global.files.dest }}}\/png\/logo-3d-2dcube-regentgray-h200@2x.png",
         "config": {
           "appName": "{{ package.name }}",
@@ -82,7 +82,7 @@
         }
       },
       "sprite1": {
-        "dest": "sprite",
+        "dest": "sprite1",
         "source": "{{{ global.files.dest }}}\/svg\/*.svg",
         "config": {
           "mode": {
@@ -107,8 +107,8 @@
       "svg": {
         "dest": "svg/bot"
       },
-      "png": {
-        "dest": "png",
+      "png1": {
+        "dest": "png1",
         "scale": {
           "width": [500],
           "height": [200]
@@ -116,7 +116,7 @@
         "retina": true
       },
       "icon1": {
-        "dest": "icon",
+        "dest": "icon1",
         "source": "{{{ global.files.dest }}}\/png\/logo-3d-2dcube-regentgray-h200@2x.png",
         "config": {
           "appName": "{{ package.name }}",
@@ -135,7 +135,7 @@
         }
       },
       "sprite1": {
-        "dest": "sprite",
+        "dest": "sprite1",
         "source": "{{{ global.files.dest }}}\/svg\/*.svg",
         "config": {
           "mode": {
@@ -163,8 +163,8 @@
       "svg": {
         "dest": "svg/carton"
       },
-      "png": {
-        "dest": "png",
+      "png1": {
+        "dest": "png1",
         "scale": {
           "width": [500],
           "height": [200]
@@ -172,7 +172,7 @@
         "retina": true
       },
       "icon1": {
-        "dest": "icon",
+        "dest": "icon1",
         "source": "{{{ global.files.dest }}}\/png\/logo-invert-yellow-h256@2x.png",
         "config": {
           "appName": "{{ package.name }}",
@@ -191,7 +191,7 @@
         }
       },
       "sprite1": {
-        "dest": "sprite",
+        "dest": "sprite1",
         "source": "{{{ global.files.dest }}}\/svg\/*.svg",
         "config": {
           "mode": {
@@ -226,7 +226,7 @@
     }
   },
   "data": {
-    "comment": "---------------------[ LOGO & BOT DATA ]--------------------------------------",
+    "comment": "---------------------[ logo & bot data targets ]--------------------------------------",
     "default": {
       "name": "",
       "description": "Values to drive GitBoxed logos generation",
@@ -625,6 +625,7 @@
         "right_tape": true
       }
     },
+    "comment": "---------------------[ Carton data targets ]--------------------------------------",
     "cartault": {
       "name": "",
       "value": {
@@ -864,8 +865,5 @@
     "dddu": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_down": true,"south_down": true,"west_up": true}},
     "dddm": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_down": true,"south_down": true,"west_middle": true}},
     "dddd": {"children": ["north-east-south-west"],"value": {"north_down": true,"east_down": true,"south_down": true,"west_down": true}}
-
-
-
   }
 }
