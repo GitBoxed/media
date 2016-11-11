@@ -1,4 +1,4 @@
-# Media [![Build Status](https://travis-ci.org/gitboxed/media.svg?branch=master)](https://travis-ci.org/gitboxed/media)
+# Media
 > GitBoxed logo and artwork http://gitboxed.io
 
 #### Background
